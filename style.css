@@ -3,6 +3,7 @@
     --primary-color :#232528;
     --secondary-color:#F6F7F8;
     --background-color:#89BBFE;
+    --dark-background:#252525;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -29,6 +30,10 @@
     border: 1px solid var(--secondary-color)!important;
 }
 
+.dark-background{
+    background-color: var(--dark-background);
+}
+
 .calculator{
     width: 30%;
     height: 70%;
@@ -49,7 +54,8 @@
 }
 
 .sum-display{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-right: 10px;
 }
 
 .calculator-pad{
@@ -126,7 +132,7 @@ input[type="checkbox"]{
     background-color:var(--background-color);
     box-shadow: inset -15px -15px 38px #2c2323,
     inset -15px -15px 38px #151414,
-    inset 15px 15px 38px #cacaca,
+    inset 15px 15px 38px #6f6b6b ,
     inset -15px -15px 38px #a5a5a5;
     position: relative;
     cursor: pointer;

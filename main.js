@@ -6,6 +6,8 @@ const pointBtn = document.querySelector("#point");
 const sumBtn = document.querySelector("#sum");
 const reset = document.querySelector("#reset");
 const sumDisplay = document.querySelector("#sum-display");
+const container = document.querySelector("#container");
+const legend = document.querySelector("#legend")
 
 function darkMode(element) {
     element.classList.toggle("dark-mode");
@@ -21,6 +23,8 @@ function darkTheme() {
     darkMode(screen);
     darkMode(sumBtn);
     darkMode(reset)
+    darkMode(legend)
+    container.classList.toggle("dark-background")
 }
 
 darkThemeBtn.addEventListener('click',darkTheme);
@@ -34,12 +38,12 @@ const calcul = () => {
         let result
         total = number.textContent;
         totalArray.push(total);
-        console.log(totalArray)
         joinArray = totalArray.join("");
         sumDisplay.textContent = joinArray;
         result = eval(joinArray);
         sumBtn.addEventListener('click',() => {
             sumDisplay.textContent = result
+            totalArray = [result]
         })
     })
     }
